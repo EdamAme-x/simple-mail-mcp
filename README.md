@@ -183,6 +183,8 @@ Provider JSON is validated before use and limited to 16 MiB per response. Outloo
 
 ## Stored credentials and upgrading
 
+See the [privacy policy](PRIVACY.md) for what Mail MCP accesses, where information goes, and how to disconnect an account.
+
 Credentials are stored as local JSON in `~/.mail-mcp/accounts/<name>.json`. Each account has its own file, so refreshing one does not overwrite another. Files are written atomically, with directory/file modes `0700` / `0600` on POSIX; Windows uses your user profile's ACLs. Credentials are not encrypted.
 
 The old `~/.mail-mcp/tokens.json` from v0.1 is recognized as Gmail account `default`. It moves to `accounts/default.json` on the next successful token save. Existing credentials need no manual editing. Login without `--account` still targets `default`.
